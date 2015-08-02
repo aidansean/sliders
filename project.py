@@ -3,9 +3,13 @@ from project_module import project_object, image_object, link_object, challenge_
 p = project_object('sliders', 'Sliding tile game solver')
 p.domain = 'http://www.aidansean.com/'
 p.path = 'sliders'
-p.preview_image_ = image_object('http://placekitten.com.s3.amazonaws.com/homepage-samples/408/287.jpg', 408, 287)
+p.preview_image    = image_object('%s/images/project.jpg'   %p.path, 150, 250)
+p.preview_image_bw = image_object('%s/images/project_bw.jpg'%p.path, 150, 250)
+p.folder_name = 'aidansean'
 p.github_repo_name = 'sliders'
 p.mathjax = False
+p.tags = 'Maths,Games'
+p.technologies = 'canvas,CSS,HTML,JavaScript'
 p.links.append(link_object(p.domain, 'sliders', 'Live page'))
 p.introduction = 'I was playing a <a href="http://www.puzzlescript.net/play.html?p=8931824">PuzzelScript game</a> involving sliding blocks that i just couldn\'t solve.  So I wrote an algorithm to solve it.'
 p.overview = '''The algorithm used is a simple backtracking algorithm to find the optimal solution (the one using the fewest moves.)  The user can create an arbitrary puzzle for solution, and then the algorithm attempts to find solutions, giving the user progress updates as it does.  Once the solution is found it's written out for the user, and the solution is animated.'''
